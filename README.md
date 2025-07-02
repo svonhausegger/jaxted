@@ -76,7 +76,7 @@ Given a `numpyro` model, you can generate jaxted-compatible log-likelihood and p
 from jaxted.numpyro import jaxted_inputs_from_numpyro
 jaxted_inputs_from_numpyro
 
-jaxted_loglikelihood, jaxted_prior = jaxted_inputs_from_numpyro(model)
+jaxted_loglikelihood, jaxted_logprior, jaxted_sampleprior, _ = jaxted_inputs_from_numpyro(model)
 ```
 
 ### Bilby
