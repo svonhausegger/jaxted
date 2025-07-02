@@ -139,7 +139,7 @@ def while_tqdm(
             else:
                 i = val[-1]
                 bar_id = 0
-                i, val = update_progress_bar((i, val), i)
+                i, val = update_progress_bar((i, val), i, bar_id=bar_id)
                 result = func(val)
                 output = result
             i = jax.lax.select(result, i, 100000 - 1)
